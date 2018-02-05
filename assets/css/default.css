@@ -1,0 +1,278 @@
+/* Table of Contents
+/* ------------------------------------------------------------
+
+This is a development CSS file which is built to a minified
+production stylesheet in assets/built/screen.css
+
+1.  Global Styles
+2.  Layout
+3.  Special Templates
+4.  Site Header
+5.  Site Navigation
+6.  Post Feed
+7.  Single Post
+  7.1. Subscribe Form
+  7.2. Post Footer
+  7.3. Comments
+  7.4. Related Posts
+  7.5. Floating Header
+8.  Author Template
+9.  Error Template
+10. Subscribe Overlay
+11. Site Footer
+
+*/
+
+/* 1. Global - Set up the things
+/* ---------------------------------------------------------- */
+@import "global.css";
+
+body {
+    background: #f4f8fb;
+}
+
+.img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+    position: absolute;
+    text-indent: -9999px;
+}
+
+
+/* 2. Layout - Page building blocks
+/* ---------------------------------------------------------- */
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-main {
+    z-index: 100;
+    flex-grow: 1;
+}
+
+/* Full width page blocks */
+.outer {
+    position: relative;
+    padding: 0 4vw;
+}
+
+/* Centered content container blocks */
+.inner {
+    margin: 0 auto;
+    max-width: 960px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* Usage:
+
+<div class="outer">
+    <div class="inner">
+        Centered content
+    </div>
+</div>
+
+*/
+
+.caps {
+    text-transform: uppercase;
+    height: 100%;
+}
+
+/* 3. Special Template Styles
+/* ---------------------------------------------------------- */
+
+@media (min-width: 900px) {
+    .home-template .post-feed,
+    .tag-template .post-feed,
+    .author-template .post-feed {
+        margin-top: -70px;
+        padding-top: 0;
+    }
+    .home-template .site-nav {
+        position: relative;
+        top: -70px;
+    }
+}
+
+/* 4. Site Header
+/* ---------------------------------------------------------- */
+header {
+    box-sizing: border-box;
+    background-color: #000000;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    /* display: block; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* .header-nav {
+    position: relative;
+} */
+
+.hero {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 36px;
+    flex: initial;
+    color: #fff;
+    line-height: 1em;
+    height: 40px;
+}
+
+/* 5. Site Navigation
+/* ---------------------------------------------------------- */
+
+.link-bar {
+    flex: 3;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+}
+
+.nav-container {
+    display: flex;
+    flex: 2;
+    padding-left: 20px;
+    height: 40px;
+    margin: 0 auto;
+    vertical-align: baseline;
+    line-height: 1em;
+}
+
+
+.nav {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 12.5px 0;
+    background-clip: padding-box;
+    color: #fff;
+}
+
+.nav:hover {
+    background-color: #fff;
+    text-decoration: none;
+    color: #000;
+    opacity: 1;
+}
+
+.nav-link {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18;
+    font-weight: 400;
+    padding: 12.5px 10px;
+    text-transform: uppercase;
+    /* padding: 10px 12px; */
+    opacity: 0.8;
+    font-language-override: 1em;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+}
+
+.social-container-right {
+    display: flex;
+    flex: auto;
+    justify-content: flex-end;
+    height: 40px;
+    margin: 0 auto;
+    vertical-align: middle;
+    line-height: 1em;
+}
+
+.social-nav {
+    font-size: 18px;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 11.5px 0;
+    background-clip: padding-box;
+    color: #fff;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-nav:hover {
+    background-color: #fff;
+    text-decoration: none;
+    color: #000;
+    opacity: 1;
+}
+
+
+/* Special Styling for home page grid (below):
+
+The first (most recent) post in the list is styled to be bigger than the others and take over the full width of the grid to give it more emphasis. Wrapped in a media query to make sure this only happens on large viewports / desktop-ish devices.
+
+ */
+
+ /* @media (min-width: 795px) {
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) {
+        flex: 1 1 100%;
+        flex-direction: row;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-image-link {
+        position: relative;
+        flex: 1 1 auto;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-content {
+        flex: 0 1 357px;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) h2 {
+        font-size: 2.6rem;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) p {
+        font-size: 1.8rem;
+        line-height: 1.55em;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-content-link {
+        padding: 30px 40px 0;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-meta {
+        padding: 0 40px 30px;
+    }
+} */
+
+.home-template .site-header:after {
+    display: none;
+}
+
+
+Adjust some margins for smaller screens
+@media (max-width: 650px) {
+    .post-feed {
+        padding-top: 5vw;
+    }
+    .post-card {
+        margin: 0 20px 5vw;
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "stratos",
+    "description": "A WIP fancy theme for mrkw.se",
+    "demo": "https://scou.se",
+    "version": "0.0.1-alpha",
+    "engines": {
+        "ghost": ">=1.20.3"
+    },
+    "license": "TBC",
+    "author": {
+        "name": "Mark Woosey",
+        "email": "dev@mrkw.se",
+        "url": "https://mrkw.se"
+    }
+}

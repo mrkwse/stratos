@@ -1,0 +1,8 @@
+<div class="nav-container">
+    <!-- Loop through the navigation items -->
+    {{#foreach navigation}}
+    {{!-- {{@index}} {{#unless @first}} •  --}}
+    <span class="nav nav-{{slug}}{{#if current}} nav-current{{/if}}"><a class="nav-link" href="{{url absolute="true"}}">{{label}}</a></span>
+    {{/foreach}}
+    <!-- End the loop -->
+</div>
