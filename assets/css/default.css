@@ -142,6 +142,11 @@ header {
     display: flex;
     justify-content: center;
 }
+
+.no-cover {
+    background: #444;
+}
+
 .cover-photo {
     position: absolute;
     width: 100%;
