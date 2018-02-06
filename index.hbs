@@ -12,11 +12,19 @@ into the {body} of the default.hbs template --}}
                 {{else}}
                     {{@blog.title}}
                 {{/if}} --}}
-            </h1>
+            {{!-- </h1>
             <h2 class="site-description">{{@blog.description}}</h2>
         </div>
     </div>
 </header> --}}
+
+<div class="cover">
+    <div class="cover-photo {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}"></div>
+    <div class="cover-content">
+        <div class="cover-title">{{@blog.title}}</div>
+        <div class="cover-subheading">{{@blog.description}}</div>
+        </div>
+</div>
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer" role="main">
@@ -26,7 +34,7 @@ into the {body} of the default.hbs template --}}
             {{#foreach posts}}
 
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-preview"}}
+                {{!-- {{> "post-preview"}} --}}
 
             {{/foreach}}
         </div>
