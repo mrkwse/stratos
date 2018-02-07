@@ -46,6 +46,32 @@ body {
     text-indent: -9999px;
 }
 
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1em;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* .inline-button {
+    padding: 0 2px 0 50px;
+    height: 25px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.inline-button:hover {
+    background: #ccc;
+    color: #000;
+    text-decoration: none;
+} */
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
@@ -94,19 +120,6 @@ body {
 
 /* 3. Special Template Styles
 /* ---------------------------------------------------------- */
-
-@media (min-width: 900px) {
-    .home-template .post-feed,
-    .tag-template .post-feed,
-    .author-template .post-feed {
-        margin-top: -70px;
-        padding-top: 0;
-    }
-    .home-template .site-nav {
-        position: relative;
-        top: -70px;
-    }
-}
 
 /* 4. Site Header
 /* ---------------------------------------------------------- */
@@ -171,7 +184,8 @@ header {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 36px;
-    padding: 6px 0;
+    /* margin: 0; */
+    margin: 6px 0;
 }
 
 .cover-subheading {
@@ -233,13 +247,23 @@ header {
 }
 
 .social-container-right {
-    display: flex;
-    flex: auto;
-    justify-content: flex-end;
-    height: 40px;
-    margin: 0 auto;
-    vertical-align: middle;
-    line-height: 1em;
+    display: none;
+}
+
+.hide-first {
+    display: none;
+}
+
+@media (min-width: 550px) {
+    .social-container-right {
+        display: flex;
+        flex: auto;
+        justify-content: flex-end;
+        height: 40px;
+        margin: 0 auto;
+        vertical-align: middle;
+        line-height: 1em;
+    }
 }
 
 .social-nav {
@@ -261,6 +285,111 @@ header {
     opacity: 1;
 }
 
+/* 6. Post Feed
+/* ---------------------------------------------------------- */
+
+.post-feed {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 60px 0;
+}
+
+.post-preview {
+    flex: auto;
+    max-width: 960px;
+    display: flex;
+}
+
+.post-preview-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 0;
+}
+
+.post-preview-header-image {
+    background-size: cover;
+    padding: 0 20px;
+    height: 200px;
+    width: 105%;
+    max-width: 1000px;
+    filter: brightness(0.8) saturate(0.7);
+}
+
+.post-preview-header-image:hover {
+    filter: brightness(0.9) saturate(0.4);
+}
+
+.post-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.post-preview-header-image + .post-info {
+    color: #fff;
+    filter: none;
+    position: absolute;
+    margin: 0 0 20px 0;
+}
+
+.post-preview-title {
+    flex: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    /* margin: 0 0 40px 0; */
+}
+
+/* .post-preview-header-image + .post-preview-title {
+    color: #fff;
+    filter: none;
+    position: absolute;
+    margin: 0 0 20px 0;
+} */
+
+.post-card-content-link:hover {
+    text-decoration: none;
+    color: #555;
+}
+
+date {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 0 5px;
+    margin: -50px 0 0 0;
+    position: absolute;
+    white-space: nowrap;
+}
+
+@media (min-width: 1330px) {
+    .date-dummy {
+        flex: auto;
+        position: relative;
+    }
+    
+    date {
+        margin: -8px 0 0 0;
+        text-align: right;
+        right: 28px;
+    }
+}
+
+/* .post-card-excerpt {
+    
+} */
+
+
+
 /* 11. Site Footer
 /* ---------------------------------------------------------- */
 
@@ -269,8 +398,7 @@ header {
     height: 40px;
     background-color: #F2F2F2;
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    flex-direction: row;
     color: #262626;
     padding: 7px 0;
     font-family: 'Open Sans', sans-serif;
@@ -348,7 +476,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     }
 } */
 
-.home-template .site-header:after {
+/* .home-template .site-header:after {
     display: none;
 }
 
@@ -361,4 +489,4 @@ Adjust some margins for smaller screens
     .post-card {
         margin: 0 20px 5vw;
     }
-}
+} */
