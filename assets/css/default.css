@@ -228,6 +228,16 @@ header {
     height: 40px;
 }
 
+a.hero {
+    text-decoration: none;
+    padding: 0 8px;
+}
+
+a.hero:hover {
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+}
 /* 4a. Home cover
 /* ---------------------------------------------------------- */
 .cover {
@@ -289,7 +299,7 @@ header {
 .nav-container {
     display: flex;
     flex: 2;
-    padding-left: 20px;
+    padding-left: 12px;
     height: 40px;
     margin: 0 auto;
     vertical-align: baseline;
@@ -458,7 +468,7 @@ date {
     }
     
     date {
-        margin: -8px 0 0 0;
+        margin: 10px 0 0 0;
         text-align: right;
         right: 28px;
     }
@@ -530,7 +540,7 @@ date {
 @media (min-width: 1330px) {
     
     .post-cover-content date {
-        margin: -8px 0 0 0;
+        margin: 16px 0 0 0;
         text-align: right;
         right: 28px;
     }
