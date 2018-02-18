@@ -376,6 +376,50 @@ a.hero:hover {
     opacity: 1;
 }
 
+.tag-cover {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 24px 0;
+}
+
+.tag-cover-content {
+    padding: 0 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    color: #fff;
+    height: 300px;
+}
+
+.tag-title-bound {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 0 0 0;
+    color: #fff;  
+    flex-grow: 1;
+}
+
+.tag-title-bound date {
+    margin: 16px 0 0 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.tag-hero-paragraph {
+    flex-grow: 20;
+    /* height: 140px; */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 20px 0;
+}
+
 /* 6. Post Feed
 /* ---------------------------------------------------------- */
 
@@ -494,10 +538,9 @@ date {
 }
 
 .post-featured-image {
-    position: absolute;
     background-size: cover;
     width: 100%;
-    height: 500px;
+    height: 100%;
     filter: brightness(0.8) saturate(0.7);
 }
 

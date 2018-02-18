@@ -1,0 +1,46 @@
+{{!< default}}
+
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#tag}}
+<div class="tag-cover">
+    <div class="post-featured-image {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-featured-image{{/if}}"></div>
+    <div class="tag-cover-content">
+        <div class="tag-title-bound">
+            <div class="post-title-date-dummy">
+                <h1 class="post-title">{{name}}</h1>
+                <div class="date-dummy">
+                    <date>Tagged</date>
+                </div>
+            </div>
+        </div>
+        <div class="tag-hero-paragraph">{{description}}</div>
+        {{!-- {{#if website}}<div class="post-cover-author"><span class="author-trans">Web:</span> <a href="{{website}}">{{name}}</a></div>{{/if}} --}}
+    </div>
+</div>
+{{/tag}}
+
+<main id="site-main" class="site-main" role="main">
+    <div class="inner post-content">
+      <div class="post-feed">
+            {{#foreach posts}}
+
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-preview"}}
+
+            {{/foreach}}
+        </div>  
+    </div>
+    <div class="inner post-meta">
+        <div class="fin-hr">
+            <hr>
+            <span class="fin-hero">MW</span>
+            <hr>
+        </div>
+        <div class="post-tags">
+            {{tags prefix="#" separator=" #"}}
+        </div>
+    </div>
+</main> 
