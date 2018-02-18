@@ -71,9 +71,10 @@ h3 {
 p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 3vmin;
+    font-size: 4vmin;
     line-height: 1.2em;
 }
+
 @media (min-width: 600px) {
     p {
         font-size: 18px;
@@ -90,6 +91,10 @@ p > a:hover {
     text-decoration: none;
     color: #333;
     border-bottom: 1px solid #333;
+}
+
+div > p {
+    max-width: 100%;
 }
 
 strong, b {
@@ -405,19 +410,36 @@ a.hero:hover {
     flex-grow: 1;
 }
 
+@media (min-width: 1330px) {
+    
+    .tag-title-bound date {
+        margin: 16px 0 0 0;
+        text-align: right;
+        right: 28px;
+    }
+}
+
 .tag-title-bound date {
-    margin: 16px 0 0 0;
     background-color: #fff;
     color: #000;
+    margin: -20px 0 0 0;
 }
 
 .tag-hero-paragraph {
-    flex-grow: 20;
+    flex-grow: 2;
     /* height: 140px; */
     font-family: 'Open Sans', sans-serif;
-    font-size: 24px;
+    font-size: 4.2vmin;
+    line-height: 1em;
     font-weight: 400;
-    padding: 20px 0;
+    padding: 10px 0;
+}
+
+@media (min-width: 600px) {
+    .tag-hero-paragraph {
+        font-size: 24px;
+        padding: 20px 0;
+    }
 }
 
 /* 6. Post Feed
@@ -659,6 +681,9 @@ p:first-child * {
 .post-cover-author > a:hover {
     text-decoration: none;
     opacity: 0.8;
+}
+.kg-card-markdown {
+    max-width: 100%;
 }
 
 .post-content > .kg-card-markdown > p:first-child {

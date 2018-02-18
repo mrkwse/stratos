@@ -11,5 +11,8 @@
         "name": "Mark Woosey",
         "email": "dev@mrkw.se",
         "url": "https://mrkw.se"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1"
     }
 }
