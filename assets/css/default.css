@@ -412,6 +412,12 @@ a.hero:hover {
     flex-grow: 1;
 }
 
+.tag-title-bound date {
+    background-color: #fff;
+    color: #000;
+    margin: -20px 0 0 0;
+}
+
 @media (min-width: 1330px) {
     
     .tag-title-bound date {
@@ -419,12 +425,6 @@ a.hero:hover {
         text-align: right;
         right: 28px;
     }
-}
-
-.tag-title-bound date {
-    background-color: #fff;
-    color: #000;
-    margin: -20px 0 0 0;
 }
 
 .tag-hero-paragraph {
@@ -451,7 +451,7 @@ a.hero:hover {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 60px 0;
+    padding: 20px 0;
 }
 
 .post-preview {
@@ -465,7 +465,17 @@ a.hero:hover {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    padding: 50px 0 20px 0;
+}
+
+/* .post-preview-header:first-child {
     padding: 20px 0;
+} */
+
+@media (min-width: 1330px) {
+    .post-preview-header {
+        padding: 20px 0;
+    }
 }
 
 .post-preview-header-image {
