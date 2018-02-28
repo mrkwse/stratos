@@ -251,10 +251,7 @@ a.hero:hover {
     height: 400px;
     display: flex;
     justify-content: center;
-}
-
-.no-cover {
-    background: #444;
+    background-color: #444;
 }
 
 .cover-photo {
@@ -389,6 +386,7 @@ a.hero:hover {
     display: flex;
     justify-content: center;
     margin: 0 0 24px 0;
+    background-color: #444;
 }
 
 .tag-cover-content {
@@ -486,6 +484,7 @@ a.hero:hover {
     width: 105%;
     max-width: 1000px;
     filter: brightness(0.8) saturate(0.7);
+    background-color: #444;
 }
 
 .post-preview-header-image:hover {
@@ -566,10 +565,11 @@ date {
     display: flex;
     justify-content: center;
     margin: 0 0 24px 0;
+    background-color: #444;
 }
 
 .no-featured-image {
-    background: #444;
+    background-color: #444;
 }
 
 .post-featured-image {
