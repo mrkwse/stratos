@@ -35,8 +35,10 @@ into the {body} of the default.hbs template --}}
             <span class="fin-hero">MW</span>
             <hr>
         </div>
-        <div class="post-tags">
-            {{tags prefix="#" separator=" #"}}
+        <div class="post-tag-list">
+            {{#foreach tags}}
+                <span class="post-tag"><a href="{{url}}">#{{name}}</a></span>
+            {{/foreach}}
         </div>
     </div>
 </main>
