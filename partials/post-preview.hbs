@@ -3,7 +3,7 @@
         <a class="post-card-content-link" href="{{url}}">
             <div class="post-preview-header {{#if feature_image}}preview-header-with-image{{/if}}">
                 {{#if feature_image}}
-                <div class="post-preview-header-image" style="background-image: url({{feature_image}})"></div>
+                <div class="post-preview-header-image {{#if featured}}featured-preview-image{{/if}}" style="background-image: url({{feature_image}})"></div>
                 {{/if}}
                 <div class="post-info">
                     <h1 class="post-preview-title">{{title}}</h1>
